@@ -60,15 +60,16 @@
 
     <ImageView
         android:id="@+id/avatar"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="38dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
         android:width="48dp"
         android:height="48dp"
         android:viewportWidth="48"
         android:viewportHeight="48"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/ic_netology" />
 
     <Button
         android:id="@+id/button2"
@@ -107,7 +108,7 @@
         android:layout_height="wrap_content"
         android:text="@string/_500"
         app:layout_constraintStart_toEndOf="@+id/button4"
-        tools:layout_editor_absoluteY="206dp" />
+        app:layout_editor_absoluteY="206dp" />
 
 
 
