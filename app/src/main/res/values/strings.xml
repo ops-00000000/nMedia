@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">nmedia</string>
     <string name="nmedia">NMedia!</string>
+    <string name="_500">500</string>
 </resources>

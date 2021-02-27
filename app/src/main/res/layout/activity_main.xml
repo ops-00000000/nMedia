@@ -19,7 +19,7 @@
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed"
-        tools:text="@sample/posts.json/data/author" />
+        android:text="@sample/posts.json/data/author" />
 
     <TextView
         android:id="@+id/published"
@@ -30,16 +30,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toBottomOf="@id/author"
-        tools:text="@sample/posts.json/data/published" />
+        android:text="@sample/posts.json/data/published" />
 
     <ImageButton
         android:id="@+id/menu"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:background="@android:color/transparent"
+        android:src="@drawable/ic_baseline_more_vert_24"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:src="@drawable/ic_baseline_more_vert_24" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/barrier"
@@ -56,7 +56,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/barrier"
-        tools:text="@sample/posts.json/data/content" />
+       android:text="@sample/posts.json/data/content" />
 
     <ImageView
         android:id="@+id/avatar"
@@ -99,15 +99,17 @@
         app:iconTint="#686666"
         app:layout_constraintTop_toBottomOf="@+id/content"
         app:rippleColor="#EFE2E2"
-        tools:layout_editor_absoluteX="294dp" />
+        app:layout_editor_absoluteX="294dp" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="500"
+        android:text="@string/_500"
         app:layout_constraintStart_toEndOf="@+id/button4"
         tools:layout_editor_absoluteY="206dp" />
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
