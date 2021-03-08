@@ -51,7 +51,7 @@
         android:id="@+id/content"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="12dp"
         android:autoLink="web"
         android:text="@string/content"
         app:layout_constraintEnd_toEndOf="parent"
@@ -75,8 +75,9 @@
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="48dp"
-        android:layout_height="41dp"
+        android:layout_width="52dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="40dp"
         android:background="#00FFFFFF"
         app:icon="@drawable/ic_baseline_share_24"
         app:iconTint="#686666"
@@ -109,11 +110,29 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
+        android:layout_width="47dp"
+        android:layout_height="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/content"
         app:srcCompat="@drawable/ic_baseline_favorite_border_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="20dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="48dp"
+        android:text="@string/_0"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toBottomOf="@+id/content" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="17dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="52dp"
+        android:text="@string/__0"
+        app:layout_constraintStart_toStartOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/content" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
