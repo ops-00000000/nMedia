@@ -17,7 +17,6 @@ class MainActivity : AppCompatActivity() {
             getString(R.string.content),
             false,
             0,
-            false,
             0
     )
 
@@ -43,15 +42,25 @@ class MainActivity : AppCompatActivity() {
 
         val shareView = findViewById<ImageView>(R.id.share)
         shareView.setOnClickListener{
-            post.shared = !post.shared
+            post.shared = post.shared + 1
             val shareCount = findViewById<TextView>(R.id.textView3)
-            var count:Int = post.countShares
-            if (post.shared){
-                count++
-                (shareCount as TextView).setText("$count")
+            var count:Int = post.shared
+            if (post.shared > 0) count++
+            val count1 = count / 1000
+            val count2 = count / 100 % 10
+            val count3 = count / 1000000
+           val countK = when {
+             count1 >= 1 && count / 10000 < 1 -> "$count1 , $count2 K"
+               count / 10000 >= 1 -> "$count1 K"
+               count >= 1000000 ->"$count3 M"
+               else -> "$count"
+           }
+
+            if (post.shared > 0){
+                (shareCount as TextView).setText(countK)
             }
             else{
-                (shareCount as TextView).setText("$count")
+                (shareCount as TextView).setText(countK)
             }
         }
 
