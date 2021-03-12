@@ -21,39 +21,37 @@ class MainActivity : AppCompatActivity() {
             0
     )
 
-  val likeView = findViewById<ImageView>(R.id.imageView)
+  val likeView = findViewById<ImageView>(R.id.like)
     likeView.setOnClickListener {
         post.liked = !post.liked
-
+        var count:Int = post.countLike
+        val likeCount = findViewById<TextView>(R.id.textView)
 
         (it as ImageView).setImageResource(if (post.liked){
             ic_baseline_favorite_24
         }else {R.drawable.ic_baseline_favorite_border_24})
+        if (post.liked){
+            count++
+            (likeCount as TextView).setText("$count")
+        }
+        else{
+            (likeCount as TextView).setText("$count")
+        }
     }
 
-       val likeCount = findViewById<TextView>(R.id.textView)
-        likeCount.setOnClickListener{
-            post.liked = !post.liked
-            var count:Int = post.countLike
-            if (post.liked){
-                count++
-                (it as TextView).setText("$count")
-            }
-            else{
-                (it as TextView).setText("$count")
-            }
-        }
 
-        val ShareCount = findViewById<TextView>(R.id.textView3)
-        ShareCount.setOnClickListener{
+
+        val shareView = findViewById<ImageView>(R.id.share)
+        shareView.setOnClickListener{
             post.shared = !post.shared
+            val shareCount = findViewById<TextView>(R.id.textView3)
             var count:Int = post.countShares
             if (post.shared){
                 count++
-                (it as TextView).setText("$count")
+                (shareCount as TextView).setText("$count")
             }
             else{
-                (it as TextView).setText("$count")
+                (shareCount as TextView).setText("$count")
             }
         }
 
